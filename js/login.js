@@ -9,7 +9,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
    formData.append("mail", mail)
    formData.append("pass", pass)
    //efetuando a conexão com o php
-   fetch("http://localhost/loginphp/api/login/",{
+   fetch("http://localhost/Laurear/index.php/",{
     method: "POST",
     mode: "no-cors",
     body: formData
