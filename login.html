@@ -5,15 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Página de Login</title>
 <link rel="stylesheet" href="css/login.css">
+<script src="js/functions.js"></script>
+<script src="js/login.js"></script>
 </head>
 <body>
   <div class="login-container">
     <img src="img/Laurear_logo.png" alt="Logo da Empresa">
-    <form id="login-form" action="php/login.php" method="POST">
-        <input type="text" id="username" name="username" placeholder="Usuário" required><br><br>
+    <form id="login-form" action="php/index.php" method="POST">
+        <input type="text" id="email" name="email" placeholder="Email Usuário" required><br><br>
         <input type="password" id="password" name="password"  placeholder="Senha" required><br><br>
-        <button type="submit">Confirmar</button>
+        <a href="index.html"><button type="submit">Confirmar</button> </a>
+    <br>    
+    <br> 
         <a href="#" id="forgot-password">Esqueceu a senha?</a>
+    <br>
+    <br>
+        <a>É novo por aqui?</a> <a href="#" id="forgot-password"> Cadastre-se </a>
     </form>
   </div>
   <div class="footer">
@@ -24,12 +31,11 @@
         efetiva do resgate.</p>
     </div>
     <div class="footer-links">
-      <a href="#">Política de Privacidade</a>
+      <a href="index.html">Política de Privacidade</a>
       <a href="#">Termos de Uso</a>
       <a href="#">Ajuda</a>
       <a href="#">Fale Conosco</a>
     </div>
   </div>
-  <script src="js/main.js"></script>
 </body>
 </html>
