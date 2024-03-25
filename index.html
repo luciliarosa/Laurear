@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurear</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Principal</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>TESTE</h1>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">Logo da Empresa</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar">
+    </div>
+    <div class="user-info">
+      <span>Nome do Usuário</span>
+      <div class="points">
+        <span class="points-value">****</span>
+        <span class="toggle-points" onclick="togglePoints()">👁️</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="dropdown-menu">
+        <a href="#">Informações Pessoais</a>
+        <a href="#">Extrato</a>
+        <a href="#">Meus Pedidos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Vale Compras</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Minha Faculdade</a></li>
+    </ul>
+  </nav>
+
+  <!-- Corpo -->
+  <div class="content">
+    <!-- Vitrines -->
+    <div class="vitrine">
+      <img src="imagem1.jpg" alt="Vitrine 1">
+      <p>Cupom 1</p>
+    </div>
+    <div class="vitrine">
+      <img src="imagem2.jpg" alt="Vitrine 2">
+      <p>Cupom 2</p>
+    </div>
+    <div class="vitrine">
+      <img src="imagem3.jpg" alt="Vitrine 3">
+      <p>Cupom 3</p>
+    </div>
+    <div class="vitrine">
+      <img src="imagem4.jpg" alt="Vitrine 4">
+      <p>Cupom 4</p>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="company-info">
+      <p>LAUREAR. CNPJ: xx.xxx.xxx/xxxx-xx - Inscrição Estadual: xxx.xxx.xxx.xxx <br>
+      O catálogo de prêmios é atualizado periódica e automaticamente pelos parceiros e os produtos e preços poderão sofrer 
+      alterações durante a navegação, <br> sem aviso prévio, devendo ser consultados pelo interessado no momento da conclusão <br>
+      efetiva do resgate.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
