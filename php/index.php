@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $rusnm = $res['user_name'];
         $rmail = $res['user_email'];
         $rmsgn = "Usuario Logado com sucesso";
+        //header('Location: /Laurear/index.html');
     }
     else{
         $rlogd = "nologed";
