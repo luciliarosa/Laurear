@@ -1,0 +1,112 @@
+/* Estilos para o cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .search-bar {
+    flex: 2;
+  }
+  
+  .user-info {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .points {
+    position: relative;
+  }
+  
+  .points-value {
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .toggle-points {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f5f5f5;
+    display: none;
+    padding: 10px;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Estilos para o menu */
+  .menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menu ul li {
+    margin-right: 20px;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos para o corpo */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .vitrine {
+    flex: 0 0 25%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .vitrine img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para o rodapé */
+  .footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .company-info {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+  }
