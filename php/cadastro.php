@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro PHP</title>
 </head>
 <body>
 
 <?php
 $conexao = mysqli_connect("localhost","root","","laurear");
-//verificando a conexao
+//Verificando a conexao
 if(!$conexao){
     echo"Não Conectado";
 }
 echo"Conectado com sucesso ao banco de dados";
 
-//recuperando dados e consultado se ja está cadastrado
+//Recuperando dados e consultado se ja está cadastrado
 $cpf = $_POST['cpf'];
 $cpf = mysqli_real_escape_string($conexao, $cpf);
 
@@ -35,9 +35,6 @@ else{
    $resultado = mysqli_query($conexao, $sql);
    echo"USUARIO CADASTRADO COM SUCESSO! <br>";
 }
-
-
-
 ?>
     
 </body>

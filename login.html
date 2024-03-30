@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/functions.js"></script>
-    <script src="js/login.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
   <div class="login-container">
+
     <img src="img/Laurear_logo.png" alt="Logo da Empresa">
 
-    <form id="login-form" action="php/index.php" method="POST">
-        <input type="text" id="email" name="email" placeholder="Email Usuário" required><br><br>
-        <input type="password" id="password" name="password"  placeholder="Senha" required><br><br>
-        <a href="index.html"><button type="submit" value="Entrar">Confirmar</button> </a>
-    <br>    
-    <br> 
-    <div class="formBoxExtra" id="formBoxExtra">
+    <form id="login-form" action="php/login.php" method="POST">
+      <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required title="Digite o CPF no formato 000.000.000-00"><br><br> 
+      <input type="password" id="senha" name="senha" placeholder="Senha" required><br> <br>
+      <a href="index.html"><button type="submit" value="Entrar">Confirmar</button> </a>
+      <br>
+      <br>
+      <div class="formBoxExtra" id="formBoxExtra">
         <a href="#" id="forgot-password">Esqueceu a senha?</a>
-    <br>
-    <br>
-        <a>É novo por aqui?</a> 
+        <br>
+        <br>
+        <a>É novo por aqui?</a>
         <a href="http://localhost:8080/Laurear/cadastro.html" id="forgot-password"> Cadastre-se </a>
-    </div>
+      </div>
     </form>
 
   </div>
   <div class="footer">
     <div class="company-info">
       <p>LAUREAR. CNPJ: xx.xxx.xxx/xxxx-xx - Inscrição Estadual: xxx.xxx.xxx.xxx <br>
-        O catálogo de prêmios é atualizado periódica e automaticamente pelos parceiros e os produtos e preços poderão sofrer 
-        alterações durante a navegação, <br> sem aviso prévio, devendo ser consultados pelo interessado no momento da conclusão <br>
+        O catálogo de prêmios é atualizado periódica e automaticamente pelos parceiros e os produtos e preços poderão
+        sofrer
+        alterações durante a navegação, <br> sem aviso prévio, devendo ser consultados pelo interessado no momento da
+        conclusão <br>
         efetiva do resgate.</p>
     </div>
     <div class="footer-links">
@@ -42,6 +45,7 @@
       <a href="#">Fale Conosco</a>
     </div>
   </div>
-  
+
 </body>
+
 </html>
