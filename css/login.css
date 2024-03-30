@@ -32,13 +32,15 @@ body {
   
   button {
 	width: 100%;
-	padding: 10px;
+	padding: 8x;
 	background-color: #5271ff;
 	color: #fff;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	text-align: center;
+	align-items: center;
   }
   
   #forgot-password {

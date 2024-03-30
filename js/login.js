@@ -1,15 +1,15 @@
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let mail= document.getElementById('email').value;
-    let pass = document.getElementById('password').value;
-    let resp = document.getElementById('formBoxExtra').value;
+document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault()
+    const mail= document.getElementById("email").value
+    const pass = document.getElementById("password").value
+    const resp = document.getElementById("formBoxExtra")
 
     // Prepara as Informações para o envio
    const formData = new FormData()
    formData.append("mail", mail)
    formData.append("pass", pass)
    //efetuando a conexão com o php
-   fetch("http://localhost/Laurear/index.php/",{
+   fetch("http://localhost:8080/Laurear/php/index.php",{
     method: "POST",
     mode: "no-cors",
     body: formData
@@ -23,7 +23,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     localStorage.setItem('usmail', data.mail)
     resp.textContent = data.msgn + " Carregando...";
     setTimeout(function(){
-        document.location.href = "./app/home";
+        document.location.href = "http://localhost:8080/Laurear/index.html";
     }, 3000)
    })
    .catch(error =>{

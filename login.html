@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página de Login</title>
-<link rel="stylesheet" href="css/login.css">
-<script src="js/functions.js"></script>
-<script src="js/login.js"></script>
+<title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/functions.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
   <div class="login-container">
     <img src="img/Laurear_logo.png" alt="Logo da Empresa">
+
     <form id="login-form" action="php/index.php" method="POST">
         <input type="text" id="email" name="email" placeholder="Email Usuário" required><br><br>
         <input type="password" id="password" name="password"  placeholder="Senha" required><br><br>
-        <a href="index.html"><button type="submit">Confirmar</button> </a>
+        <a href="index.html"><button type="submit" value="Entrar">Confirmar</button> </a>
     <br>    
     <br> 
+    <div class="formBoxExtra" id="formBoxExtra">
         <a href="#" id="forgot-password">Esqueceu a senha?</a>
     <br>
     <br>
-        <a>É novo por aqui?</a> <a href="#" id="forgot-password"> Cadastre-se </a>
+        <a>É novo por aqui?</a> 
+        <a href="http://localhost:8080/Laurear/cadastro.html" id="forgot-password"> Cadastre-se </a>
+    </div>
     </form>
+
   </div>
   <div class="footer">
     <div class="company-info">
@@ -37,5 +42,6 @@
       <a href="#">Fale Conosco</a>
     </div>
   </div>
+  
 </body>
 </html>
