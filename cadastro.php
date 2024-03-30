@@ -29,8 +29,9 @@ else{
    $cpf = $_POST['cpf']; 
    $email = $_POST['email']; 
    $nome = $_POST['nome']; 
+   $senha = $_POST['senha'];
 
-   $sql = "INSERT INTO laurear.users_2(cpf, email, nome) values('$cpf', '$email', '$nome')";
+   $sql = "INSERT INTO laurear.users_2(cpf, email, nome, senha) values('$cpf', '$email', '$nome', '$senha')";
    $resultado = mysqli_query($conexao, $sql);
    echo"USUARIO CADASTRADO COM SUCESSO! <br>";
 }
