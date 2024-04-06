@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+nav{
+    width: 100%;
+    background-color: #e0dddd;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Menu lateral */
+div.menu-lateral{
+    width: 60px;
+    height: 100%;
+    background-color: #b6b6b6;
+    padding: 40px 0 40px 0 ;
+    box-shadow: 3px 0 0 #5271ff;
+    
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+div.menu-lateral.expandir{
+    width: 350px;
+}
+
+div.btn-expandir{
+    width: 100%;
+    padding: 0 0 30px;
+   
+}
+
+.btn-expandir > i{
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.menu-lateral ul{
+    height: 100%;
+    list-style-type: none;
+
+}
+ul li.iten-menu{
+   transition: 0.5s; 
+}
+
+ul li.ativo{
+    background-color: #5271ff;
+}
+
+ul li.iten-menu:hover{
+    background: #5271ff;
+    
+}
+
+ul li.iten-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+
+}
+
+ul li.iten-menu a .txt-link{
+    margin-left: 60px;
+    transition: 0.2s;
+    opacity: 0;
+    
+}
+
+div.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.iten-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+
+/* Menu lateral FIM*/
+
+/* Nav */
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 80px;
+}
+
+#title{
+    font-size: 30px;
+    line-height: 10px;
+    color: #5271ff;
+    padding: 25px 20px 10px;
+    text-align: center;
+}
+
+.barra li{
+    display: inline-block;
+    margin: 20px;
+    color: #5a5a5a ;
+    position: relative;
+   
+}
+
+.barra li::after{
+    content: "";
+    position: absolute;
+    background-color: #5271ff;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.barra li:hover::after{
+    width: 100%;
+}
+
+.barra li{
+    font-style: bolder;
+    font-size: 19px;
+    transition: 0.5s;
+}
+
+.barra li:hover{
+    color:#5271ff;
+
+}
+
+#user{
+    font-size: 15px;
+}
+
+/* Nav FIM */
+
+.buscar{
+    text-align: center;
+    margin: 10px;
+}
+
+.busca{
+    padding: 10px 40px;
+    border-radius: 100px;
+    border: solid 2px;
+    text-align: center;
+}
+
+ .busca:hover{
+    transition:  0.5s;
+    background-color: rgb(236, 235, 235);
+} 
+
+main{
+    margin-left: 70px;
+}
+
+.vitrine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px 20px;
+}
+.vitrine img{
+    border: solid 2px #000000;
+    border-radius: 1000px;
+    height: 260px;
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    background-color: #bbbbbb;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    flex-shrink: 0;
+
+}
+.company-info{
+    text-align: center;
+    margin: 25px 10px 30px;
+    color: #000000;
+    font-size: 16px;
+    font-style: bolder;
+
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #383838;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0 0 0 95px;
+    margin: 20px 70px;
+    transition: 0.5s;
+    font-size: 16px;
+    font-style: bolder;
+}
+
+.footer-links a:hover{
+    color: #000000;
+}
+
+/* Footer FIM*/
