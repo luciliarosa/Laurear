@@ -75,9 +75,9 @@ if (isset($_SESSION['nome_usuario'])) {
                 </div>
                 <div class="points">
                     <h3>Olá, <?php echo $nome_usuario; ?></h3>
-                    <h3><span class="points-value"> ****</span>
+                    <h4><span class="points-value"> ****</span>
                     <span class="toggle-points" onclick="togglePoints()">
-                        <i id="eyeIcon" class="bi bi-eye-slash"></i> </h3><!-- Ícone do olho fechado -->
+                        <i id="eyeIcon" class="bi bi-eye-slash"></i> </h4><!-- Ícone do olho fechado -->
                     </span>
                 </div>
             </nav>
