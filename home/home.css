@@ -171,7 +171,7 @@ ul li.iten-menu a .icon > i{
     text-align: center;
 }
 
- .busca:hover{
+.busca:hover{
     transition:  0.5s;
     background-color: rgb(236, 235, 235);
 } 
@@ -187,44 +187,36 @@ main{
     margin: 30px 20px;
 }
 .vitrine img{
-    border: solid 2px #000000;
+    border: solid 1px #000000;
     border-radius: 1000px;
     height: 260px;
 }
 
-/* Footer */
-.footer{
-    width: 100%;
-    background-color: #bbbbbb;
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    flex-shrink: 0;
+/* Footer FIM*/
 
+.footer {
+	width: 100%;
+	background-color: #f4f4f4;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
 }
-.company-info{
-    text-align: center;
-    margin: 25px 10px 30px;
-    color: #000000;
-    font-size: 16px;
-    font-style: bolder;
-
+  
+.company-info p {
+	margin: 5;
+	font-size: 12px;
 }
-
-.footer-links a{
-    text-decoration: none;
-    color: #383838;
-    display: inline-flex;
-    justify-content: space-around;
-    padding: 0 0 0 95px;
-    margin: 20px 70px;
-    transition: 0.5s;
-    font-size: 16px;
-    font-style: bolder;
+  
+.footer-links a {
+	text-decoration: none;
+	color: #333;
+	margin-right: 10px;
 }
-
 .footer-links a:hover{
     color: #000000;
 }
 
-/* Footer FIM*/
+

@@ -24,7 +24,7 @@ $sql = "SELECT * from laurear.users_2 WHERE cpf='$cpf' AND senha='$senha'";
 $retorno = mysqli_query($conexao, $sql);
 
 if(mysqli_num_rows($retorno)>0){
-    header('Location: /Laurear/index.html');
+    header('Location: /Laurear/home.html');
     echo"LOGADO COM SUCESSO<br>";
 }
 else{

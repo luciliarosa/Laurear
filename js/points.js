@@ -7,9 +7,3 @@ function togglePoints() {
       points.textContent = '****';
     }
   }
-  
-  // Função para mostrar/ocultar o menu dropdown
-  function toggleMenu() {
-    let dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-  }
