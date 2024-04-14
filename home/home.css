@@ -100,7 +100,6 @@ ul li.iten-menu a .icon > i{
     margin-left: 10px;
 }
 
-
 /* Menu lateral FIM*/
 
 /* Nav */
@@ -219,4 +218,7 @@ main{
     color: #000000;
 }
 
-
+/* Olhinho Points */
+#eyeIcon {
+    font-size: 50px; /* Tamanho do ícone em pixels */
+  }
