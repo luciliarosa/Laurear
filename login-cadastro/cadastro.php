@@ -33,7 +33,7 @@ else{
 
    $sql = "INSERT INTO laurear.users_2(cpf, email, nome, senha) values('$cpf', '$email', '$nome', '$senha')";
    $resultado = mysqli_query($conexao, $sql);
-   echo"USUARIO CADASTRADO COM SUCESSO! <br>";
+   echo '<script>window.alert("Usuário Cadastrado com sucesso!"); window.location.href = "/Laurear/login.html";</script>';
 }
 ?>
     
