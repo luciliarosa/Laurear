@@ -15,11 +15,13 @@ if (isset($_SESSION['nome_usuario'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Página Principal</title>
-        <link rel="stylesheet" href="home/page.css">
+        <link rel="stylesheet" href="home/teste.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     </head>
+
     <body>
-        <!-- Menu Lateral -->
+
+         <!-- Menu Lateral -->
                 
          <div class="menu-lateral">
 
@@ -65,15 +67,19 @@ if (isset($_SESSION['nome_usuario'])) {
         </div> 
 
         <header>
+            
+               
+
             <div class="navbar">
                 <img src="img/Laurear_Lado_Claro.png" alt="Logo da Empresa">
-        <!-- 
             <nav>
-
                 <div class="search">
                     <input class="text-box" type="search" placeholder="Buscar...">
+                
                 </div>
-            </nav> -->
+                
+                
+            </nav>
             </div>
         </header>
 

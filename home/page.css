@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255); 
+    
+}
+
+body{
+    background-image: url(http://localhost:8080/Laurear/img/fundo2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #015564;
+}
+
+/* Menu lateral */
+div.menu-lateral{
+    width: 60px;
+    height: 100%;
+    background-color: #126D7D;
+    padding: 40px 0 40px 0 ;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.8s;
+    z-index: 1000;
+    
+}
+
+div.menu-lateral.expandir{
+    width: 350px;
+    background-color: #18606d;
+}
+
+div.btn-expandir{
+    width: 100%;
+    padding: 0 0 30px;
+
+}
+
+.btn-expandir > i{
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.menu-lateral ul{
+    height: 100%;
+    list-style-type: none;
+
+}
+ul li.iten-menu{
+   transition: 0.5s; 
+}
+
+ul li.ativo{
+    background-color: #238ea1;
+    
+}
+
+ul li.iten-menu:hover{
+    background: #45a5b6;
+    
+}
+
+ul li.iten-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+
+}
+
+ul li.iten-menu a .txt-link{
+    margin-left: 60px;
+    transition: 0.2s;
+    opacity: 0;
+    
+}
+
+div.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.iten-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+header {
+    background: #00000049;
+    padding: 14px 0;
+
+}
+
+.navbar {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+
+div img{
+    width: 200px ;
+}
+
+
+.text-box{
+    padding: 10px 40px;
+    border-radius: 100px;
+    border: solid white 2px;
+    background-color: #e0dddd;
+    transition: 0.5s;
+    color: #000000;
+}
+
+
+/* Olhinho Points */
+#eyeIcon {
+    font-size: 40px; /* Tamanho do ícone em pixels */
+  }
+
+div.points{
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+
+/* Imagens da Vitrine*/
+
+main div.vitrine{
+    margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.vitrine-img{
+    margin: 30px 20px;
+    width: 340px;
+    width: 340px;
+
+
+}
+.vitrine-img img{
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s all;
+    
+}
+
+.box:hover{
+    transform: translateY(20px);
+}
+
+.box img{
+    
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.8s;
+
+}
+
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-size: 30px;
+}
+
+.box:hover .overlay{
+    height: 100%;
+    
+}
+
+/* Footer*/
+
+footer {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 15px;
+	background-color: #C4C4C4;
+	padding: 40px 0px 40px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+}
+  
+.company-info p {
+    color: #000000;
+	margin: 5;
+	font-size: 12px;
+}
+  
+.footer-links a {
+	text-decoration: none;
+	color: #5c5c5c;
+	margin-right: 10px;
+    transition: 0.2s;
+}
+.footer-links a:hover{
+    color: #161616;
+}
+
+
