@@ -66,7 +66,7 @@ if (isset($_SESSION['nome_usuario'])) {
 
         <header>
             <div class="navbar">
-                <img src="img/Laurear_Lado_Claro.png" alt="Logo da Empresa">
+                <img src="img/logo_deitado.jpeg" alt="Logo da Empresa">
         <!-- 
             <nav>
 

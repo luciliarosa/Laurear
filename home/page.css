@@ -8,17 +8,18 @@
 }
 
 body{
-    background-image: url(http://localhost:8080/Laurear/img/fundo2.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: #015564;
+    background-color: #dad9d7;
+    
+   
 }
 
 /* Menu lateral */
 div.menu-lateral{
     width: 60px;
     height: 100%;
-    background-color: #126D7D;
+    background-color: #495cb0;
     padding: 40px 0 40px 0 ;  
     position: fixed;
     top: 0;
@@ -31,7 +32,7 @@ div.menu-lateral{
 
 div.menu-lateral.expandir{
     width: 350px;
-    background-color: #18606d;
+    background-color: #495cb0;
 }
 
 div.btn-expandir{
@@ -57,17 +58,17 @@ ul li.iten-menu{
 }
 
 ul li.ativo{
-    background-color: #238ea1;
+    background-color: #6877bb;
     
 }
 
 ul li.iten-menu:hover{
-    background: #45a5b6;
+    background: #273986;
     
 }
 
 ul li.iten-menu a{
-    color: #ffffff;
+    color: #5271ff;
     text-decoration: none;
     font-size: 24px;
     padding: 20px 4%;
