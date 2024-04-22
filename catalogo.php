@@ -15,16 +15,13 @@ if (isset($_SESSION['nome_usuario'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Página Principal</title>
-        <link rel="stylesheet" href="home/home.css">
+        <link rel="stylesheet" href="catalogo/catalogo.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     </head>
     <body>
-
-        <!-- Cabeçalho -->
-        <header>
-            
-            <!-- Menu Lateral -->
-            <div class="menu-lateral">
+        <!-- Menu Lateral -->
+                
+         <div class="menu-lateral">
 
             <div class="btn-expandir">
                 <i class="bi bi-list" id="btn-exp"></i>
@@ -66,34 +63,100 @@ if (isset($_SESSION['nome_usuario'])) {
                 </li>
             </ul>
         </div> 
-                
-            <!-- Nav Principal -->
-            <nav>
-                <div class="logo">
-                    <h1 id="title">Laurear</h1>
-                    <h3>Premiar por Mérito</h3>
-                </div>
-                <div class="points">
-                    <h3>Olá, <?php echo $nome_usuario; ?></h3>
-                    <h3><span class="points-value"> ****</span>
-                    <span class="toggle-points" onclick="togglePoints()">
-                        <i id="eyeIcon" class="bi bi-eye-slash"></i> </h3><!-- Ícone do olho fechado -->
-                    </span>
-                </div>
-            </nav>
 
-            <!-- Barra de Pesquisa -->
-            <div class="buscar">
-                <input class="busca" type="text" placeholder="Buscar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <header>
+            <div class="navbar">
+                <img src="img/logo.png" alt="Logo da Empresa">
+       
+            
+            </div>
+
+            <div class="compras">
+                <i class="bi bi-cart3"></i>
             </div>
         </header>
-        
-        <!-- Principal -->
 
+        <main>
+
+        <nav>
+                <div class="search">
+                    <input class="text-box" type="search" placeholder="Buscar...">
+                </div>
+            </nav>
+            <h2 class="titulo-catalog">Recompensas Disponíveis!</h2>
+        <!-- 
+            <div class="points">
+                <h3> <?php echo $nome_usuario; ?></h3>
+                <h4> você possui <span class="points-value"> ****</span> pontos.
+                <span class="toggle-points" onclick="togglePoints()">
+                    <i id="eyeIcon" class="bi bi-eye-slash"></i> </h4>
+                </span>
+            </div>
+        -->
+
+        <!-- Catalogo -->
+        <?php
+            // Conectar ao banco de dados
+            $conexao = mysqli_connect("localhost","root","","laurear");
+
+            // Verificar a conexão
+            if (mysqli_connect_errno()) {
+                echo "Falha ao conectar ao MySQL: " . mysqli_connect_error();
+                exit();
+            }
+
+            // Consulta SQL para selecionar todos os dados da tabela
+            $sql = "SELECT * FROM produtos";
+            $resultado = mysqli_query($conexao, $sql);
+
+            // Verificar se a consulta foi bem-sucedida
+            if ($resultado) {
+                // Inicializar um vetor para armazenar os dados
+                $vetor = array();
+
+                // Iterar sobre os resultados e adicionar cada linha ao vetor
+                while ($linha = mysqli_fetch_assoc($resultado)) {
+                    $vetor[] = $linha;
+                }
+
+                // Liberar o resultado da consulta
+                mysqli_free_result($resultado);
+
+                // Fechar a conexão com o banco de dados
+                mysqli_close($conexao);
+
+                // Exibir os produtos
+                foreach ($vetor as $key => $produto) {
+        ?>
+
+            <div class="vitrine">    
+                <div class="produto">
+                    <h3><?php echo $produto['nome_produto']; ?></h3>
+                <div class="box">
+                        <img class="vitrine-img" src="<?php echo $produto['img_produto']; ?>" alt="Imagem do Produto">
+                    
+                    
+                    <div class="overlay">
+                        <h3><?php echo $produto['pontos_produto']; ?></h3>
+                        <h5><?php echo $produto['descricao_produto']; ?></h5>
+                    </div>
+                </div> 
+                    <button> <a href="?adicionar=<?php echo $key; ?>">Adicionar ao carrinho</a> </button>
+                
+            </div>    
+        <?php
+                }
+            } else {
+                // Se a consulta falhar, exibir uma mensagem de erro
+                echo "Erro ao executar a consulta: " . mysqli_error($conexao);
+            }
+        ?>
+
+        </main>
 
         <!-- Rodapé -->
-        <div class="footer">
+        <footer>
+            
             <div class="company-info">
                 <p>LAUREAR. CNPJ: xx.xxx.xxx/xxxx-xx - Inscrição Estadual: xxx.xxx.xxx.xxx <br>
                 O catálogo de prêmios é atualizado periódica e automaticamente pelos parceiros e os produtos e preços poderão
@@ -108,7 +171,8 @@ if (isset($_SESSION['nome_usuario'])) {
                 <a href="#">Ajuda</a>
                 <a href="#">Fale Conosco</a>
             </div>
-        </div>
+        
+        </footer>
         
         <script src="home/home.js"></script>
         <script src="js/points.js"></script>

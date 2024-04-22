@@ -3,6 +3,7 @@
 //temos que alterar tudo aqui, apenas peguei a base.
 // transformar planilha "produtos" que está no banco em JSON e colar no js
 // após isso apenas js e css para conseguir criar o catalogo na page do php do catalogo.
+//exemplo: https://github.com/ronaferr/project-shopping-cart?tab=readme-ov-file
 
 function createProductImageElement(imageSource) {
     const img = document.createElement('img');

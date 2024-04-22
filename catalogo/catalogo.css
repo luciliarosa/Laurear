@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255); 
+    
+}
+
+body{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #dbd8d6;
+    
+   
+}
+
+/* Menu lateral */
+div.menu-lateral{
+    width: 60px;
+    height: 100%;
+    background-color: #5371FA;
+    padding: 40px 0 40px 0 ;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.8s;
+    z-index: 1000;
+    
+}
+
+div.menu-lateral.expandir{
+    width: 350px;
+    background-color: #4458b3;
+}
+
+div.btn-expandir{
+    width: 100%;
+    padding: 0 0 30px;
+
+}
+
+.btn-expandir > i{
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.menu-lateral ul{
+    height: 100%;
+    list-style-type: none;
+
+}
+ul li.iten-menu{
+   transition: 0.5s; 
+}
+
+ul li.ativo{
+    background-color: #778ce9;
+    
+}
+
+ul li.iten-menu:hover{
+    background: #4d66d3;
+    
+}
+
+ul li.iten-menu a{
+    color: #5271ff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+
+}
+
+
+ul li.iten-menu a .txt-link{
+    margin-left: 60px;
+    transition: 0.2s;
+    opacity: 0;
+    
+}
+
+div.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.iten-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+header {
+    background: #ffffffb9;
+    padding: 40px 0;
+
+}
+
+.navbar {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 170px;
+    right: 570px;
+    
+}
+
+
+div img{
+    width: 200px ;
+    float: left;
+    margin-top: -15px;
+}
+
+div.compras > i{
+    color: #5271ff;
+    font-size: 27px;
+    margin-left: 500px;
+    transition: 0.5s all;
+}
+
+div.compras > i:hover{
+    color: #2f47b2;
+}
+
+
+.text-box{
+    text-align: center;
+    padding: 10px 100px;
+    border-radius: 100px;
+    border: solid white 2px;
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.5s;
+    
+}
+
+.text-box:hover{
+    background-color: #ffffff;
+    border: solid #7ea6ef 3px;
+}
+
+main{
+    margin: 150px 0 0 0;
+}
+
+h2.titulo-catalog{
+    margin-left: 500px;
+    margin-bottom: 90px;
+    color: #5371FA;
+    font-size: 40px;
+}
+
+/* Olhinho Points */
+#eyeIcon {
+    font-size: 40px; /* Tamanho do ícone em pixels */
+  }
+
+div.points{
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0;
+    padding: 10px 15px;
+    
+}
+
+div.points h3{
+    color: #5371FA;
+}
+
+div.points h4 span{
+    color: #5371FA;
+}
+
+div.points h4 span > i{
+    color: #5371FA;
+}
+
+/* Imagens da Vitrine*/
+
+
+div.produto h3{
+    color: #3046a6;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main div.vitrine{
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.vitrine-img{
+    margin: 30px 20px;
+    width: 240px;
+    width: 240px;
+
+
+}
+.vitrine-img img{
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s all;
+    
+}
+
+.box:hover{
+    transform: translateY(10px);
+}
+
+.box img{
+    
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+div.box h3{
+    color: #3046a6;
+    font-weight: bold;
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #050f22 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.8s;
+
+}
+
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-size: 30px;
+}
+
+.box:hover .overlay{
+    height: 100%;
+    
+}
+
+div.vitrine button{
+    background-color: #5271ff;
+    margin: 15px 10px;
+    padding: 10px 5px;
+    border: #5271ff;
+    transition: 0.5s all;
+    border-radius: 5px;
+    
+}
+
+div.vitrine button:hover{
+    background-color: #394fb0;
+    
+}
+
+div.vitrine a{
+    text-decoration: none;
+}
+
+/* Footer*/
+
+footer {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 15px;
+	background-color: #C4C4C4;
+	padding: 40px 0px 40px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+}
+  
+.company-info p {
+    color: #000000;
+	margin: 5;
+	font-size: 12px;
+}
+  
+.footer-links a {
+	text-decoration: none;
+	color: #5c5c5c;
+	margin-right: 10px;
+    transition: 0.2s;
+}
+.footer-links a:hover{
+    color: #161616;
+}
+
+
