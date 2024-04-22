@@ -15,7 +15,7 @@ if (isset($_SESSION['nome_usuario'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Página Principal</title>
-        <link rel="stylesheet" href="home/page.css">
+        <link rel="stylesheet" href="catalogo/catalogo.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     </head>
     <body>
@@ -66,7 +66,7 @@ if (isset($_SESSION['nome_usuario'])) {
 
         <header>
             <div class="navbar">
-                <img src="img/logo_deitado.jpeg" alt="Logo da Empresa">
+                <img src="img/logo.png" alt="Logo da Empresa">
         <!-- 
             <nav>
 
@@ -75,13 +75,19 @@ if (isset($_SESSION['nome_usuario'])) {
                 </div>
             </nav> -->
             </div>
+
+            <div class="compras">
+                <i style= "color: #ffffffb9;" class="bi bi-cart3"></i>
+            </div>
+            
+
         </header>
 
         <main>
 
             <div class="points">
-                <h3>Olá, <?php echo $nome_usuario; ?></h3>
-                <h4><span class="points-value"> ****</span>
+                <h3> Olá! <?php echo $nome_usuario; ?></h3>
+                <h4> Você possui <span class="points-value"> ****</span> pontos.
                 <span class="toggle-points" onclick="togglePoints()">
                     <i id="eyeIcon" class="bi bi-eye-slash"></i> </h4><!-- Ícone do olho fechado -->
                 </span>

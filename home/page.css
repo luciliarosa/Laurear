@@ -10,7 +10,7 @@
 body{
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: #dad9d7;
+    background-color: #dbd8d6;
     
    
 }
@@ -19,7 +19,7 @@ body{
 div.menu-lateral{
     width: 60px;
     height: 100%;
-    background-color: #495cb0;
+    background-color: #5371FA;
     padding: 40px 0 40px 0 ;  
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ div.menu-lateral{
 
 div.menu-lateral.expandir{
     width: 350px;
-    background-color: #495cb0;
+    background-color: #4458b3;
 }
 
 div.btn-expandir{
@@ -58,12 +58,12 @@ ul li.iten-menu{
 }
 
 ul li.ativo{
-    background-color: #6877bb;
+    background-color: #778ce9;
     
 }
 
 ul li.iten-menu:hover{
-    background: #273986;
+    background: #4d66d3;
     
 }
 
@@ -96,8 +96,8 @@ ul li.iten-menu a .icon > i{
 }
 
 header {
-    background: #00000049;
-    padding: 14px 0;
+    background: #ffffffb9;
+    padding: 40px 0;
 
 }
 
@@ -116,6 +116,19 @@ nav {
 
 div img{
     width: 200px ;
+    float: left;
+    margin-top: -15px;
+}
+
+div.compras > i{
+    color: #5271ff;
+    font-size: 27px;
+    margin-left: 500px;
+    transition: 0.5s all;
+}
+
+div.compras > i:hover{
+    color: #2f47b2;
 }
 
 
@@ -139,6 +152,19 @@ div.points{
     font-size: 25px;
     margin: 15px 0;
     padding: 10px 15px;
+    
+}
+
+div.points h3{
+    color: #5371FA;
+}
+
+div.points h4 span{
+    color: #5371FA;
+}
+
+div.points h4 span > i{
+    color: #5371FA;
 }
 
 /* Imagens da Vitrine*/
