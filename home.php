@@ -67,23 +67,16 @@ if (isset($_SESSION['nome_usuario'])) {
         <header>
             <div class="navbar">
                 <img src="img/logo.png" alt="Logo da Empresa">
-        <!-- 
-            <nav>
-
-                <div class="search">
-                    <input class="text-box" type="search" placeholder="Buscar...">
-                </div>
-            </nav> -->
+      
             </div>
 
             <div class="compras">
                 <i style= "color: #ffffffb9;" class="bi bi-cart3"></i>
             </div>
             
-
         </header>
 
-        <main>
+        <main class="main-home">
 
             <div class="points">
                 <h3> Olá! <?php echo $nome_usuario; ?></h3>
@@ -92,90 +85,11 @@ if (isset($_SESSION['nome_usuario'])) {
                     <i id="eyeIcon" class="bi bi-eye-slash"></i> </h4><!-- Ícone do olho fechado -->
                 </span>
             </div>
+            
 
             <!-- Principal -->
         
-            <div class="vitrine">
-                <div class="box">
-
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                        
-                    </div>
-                </div>
-
-                <div class="box">
-                    
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                      
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                    </div>                    
-                </div>
-
-                <div class="box">
-                    
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear 4</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear 5</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    
-                    <img class="vitrine-img" src="img/Laurear_logo.png" alt="logo">
-                    <div class="overlay">
-                        <h3>Laurear 6</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aperiam velit reprehenderit dolorem autem fugiat voluptas
-                            quia molestias voluptatibus ea ut possimus consequuntur, veritatis nulla corporis, 
-                            non itaque, mollitia ipsum quae.
-                        </p>
-                    </div>
-                </div>           
-                
-            </div>
+        
         
         </main>
 

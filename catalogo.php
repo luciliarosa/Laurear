@@ -66,9 +66,7 @@ if (isset($_SESSION['nome_usuario'])) {
 
         <header>
             <div class="navbar">
-                <img src="img/logo.png" alt="Logo da Empresa">
-       
-            
+                <img src="img/logo.png" alt="Logo da Empresa">       
             </div>
 
             <div class="compras">
@@ -76,13 +74,35 @@ if (isset($_SESSION['nome_usuario'])) {
             </div>
         </header>
 
-        <main>
+        <main class="main-catalog">
 
         <nav>
                 <div class="search">
-                    <input class="text-box" type="search" placeholder="Buscar...">
+                    <input id="searchInput" class="text-box" type="search" placeholder="Buscar...">
                 </div>
-            </nav>
+
+                <script>
+                        document.getElementById('searchInput').addEventListener('input', function() {
+                        var searchTerm = this.value.trim(); // Obtém o valor digitado e remove espaços em branco do início e do final
+                        if (searchTerm !== '') {
+                            // Enviar uma solicitação AJAX para o arquivo PHP que irá processar a pesquisa
+                            var xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    // Atualizar a parte da página que exibe os resultados da pesquisa com a resposta do servidor
+                                    document.getElementById('searchResults').innerHTML = xhr.responseText;
+                                }
+                            };
+                            // Definir o método e o arquivo PHP a serem usados na solicitação AJAX
+                            xhr.open('GET', 'processar_pesquisa.php?searchTerm=' + searchTerm, true);
+                            xhr.send();
+                        } else {
+                            // Se a barra de pesquisa estiver vazia, limpar os resultados da pesquisa
+                            document.getElementById('searchResults').innerHTML = '';
+                            }
+                        });
+                </script>
+        </nav>
             <h2 class="titulo-catalog">Recompensas Disponíveis!</h2>
         <!-- 
             <div class="points">
@@ -93,64 +113,74 @@ if (isset($_SESSION['nome_usuario'])) {
                 </span>
             </div>
         -->
-
+      
+        
         <!-- Catalogo -->
-        <?php
-            // Conectar ao banco de dados
-            $conexao = mysqli_connect("localhost","root","","laurear");
+        <div class="vitrine"> 
+            <?php
+                // Conectar ao banco de dados
+                $conexao = mysqli_connect("localhost","root","","laurear");
 
-            // Verificar a conexão
-            if (mysqli_connect_errno()) {
-                echo "Falha ao conectar ao MySQL: " . mysqli_connect_error();
-                exit();
-            }
-
-            // Consulta SQL para selecionar todos os dados da tabela
-            $sql = "SELECT * FROM produtos";
-            $resultado = mysqli_query($conexao, $sql);
-
-            // Verificar se a consulta foi bem-sucedida
-            if ($resultado) {
-                // Inicializar um vetor para armazenar os dados
-                $vetor = array();
-
-                // Iterar sobre os resultados e adicionar cada linha ao vetor
-                while ($linha = mysqli_fetch_assoc($resultado)) {
-                    $vetor[] = $linha;
+                // Verificar a conexão
+                if (mysqli_connect_errno()) {
+                    echo "Falha ao conectar ao MySQL: " . mysqli_connect_error();
+                    exit();
                 }
 
-                // Liberar o resultado da consulta
-                mysqli_free_result($resultado);
+                // Obter o termo de pesquisa da solicitação GET
+                $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
 
-                // Fechar a conexão com o banco de dados
-                mysqli_close($conexao);
+                // Consulta SQL para selecionar os dados filtrados com base no termo de pesquisa
+                $sql = "SELECT * FROM produtos WHERE nome_produto LIKE '%$searchTerm%'";
 
-                // Exibir os produtos
-                foreach ($vetor as $key => $produto) {
-        ?>
+                // Consulta SQL para selecionar todos os dados da tabela
+                //$sql = "SELECT * FROM produtos ORDER BY nome_produto ASC";
+                //$sql = "SELECT * FROM produtos WHERE nome_produto LIKE '%ifood%'";
+                //$sql = "SELECT * FROM produtos WHERE nome_produto LIKE %$search%";
+                $resultado = mysqli_query($conexao, $sql);
 
-            <div class="vitrine">    
-                <div class="produto">
+                // Verificar se a consulta foi bem-sucedida
+                if ($resultado) {
+                    // Inicializar um vetor para armazenar os dados
+                    $vetor = array();
+
+                    // Iterar sobre os resultados e adicionar cada linha ao vetor
+                    while ($linha = mysqli_fetch_assoc($resultado)) {
+                        $vetor[] = $linha;
+                    }
+
+                    // Liberar o resultado da consulta
+                    mysqli_free_result($resultado);
+
+                    // Fechar a conexão com o banco de dados
+                    mysqli_close($conexao);
+
+                    // Exibir os produtos
+                    foreach ($vetor as $key => $produto) {
+            ?>
+         
+            <div class="produto">   
                     <h3><?php echo $produto['nome_produto']; ?></h3>
-                <div class="box">
-                        <img class="vitrine-img" src="<?php echo $produto['img_produto']; ?>" alt="Imagem do Produto">
-                    
-                    
-                    <div class="overlay">
-                        <h3><?php echo $produto['pontos_produto']; ?></h3>
-                        <h5><?php echo $produto['descricao_produto']; ?></h5>
-                    </div>
-                </div> 
-                    <button> <a href="?adicionar=<?php echo $key; ?>">Adicionar ao carrinho</a> </button>
-                
-            </div>    
+                        <div class="box">
+                            <img class="vitrine-img" src="<?php echo $produto['img_produto']; ?>" alt="Imagem do Produto">
+                            
+                                <div class="overlay">
+                                    <h3><?php echo $produto['pontos_produto']; ?> Pontos </h3>
+                                    <h5><?php echo $produto['descricao_produto']; ?></h5>
+                                </div>
+                        </div> 
+                            <button> <a href="?adicionar=<?php echo $key; ?>">Adicionar ao carrinho</a> </button>
+                </div>  
+        
         <?php
+
                 }
             } else {
                 // Se a consulta falhar, exibir uma mensagem de erro
                 echo "Erro ao executar a consulta: " . mysqli_error($conexao);
             }
-        ?>
+        ?> 
+        </div> 
 
         </main>
 

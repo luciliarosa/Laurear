@@ -11,11 +11,10 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #dbd8d6;
-    
-   
 }
 
 /* Menu lateral */
+
 div.menu-lateral{
     width: 60px;
     height: 100%;
@@ -27,7 +26,6 @@ div.menu-lateral{
     overflow: hidden;
     transition: 0.8s;
     z-index: 1000;
-    
 }
 
 div.menu-lateral.expandir{
@@ -38,7 +36,6 @@ div.menu-lateral.expandir{
 div.btn-expandir{
     width: 100%;
     padding: 0 0 30px;
-
 }
 
 .btn-expandir > i{
@@ -51,20 +48,18 @@ div.btn-expandir{
 .menu-lateral ul{
     height: 100%;
     list-style-type: none;
-
 }
+
 ul li.iten-menu{
    transition: 0.5s; 
 }
 
 ul li.ativo{
     background-color: #778ce9;
-    
 }
 
 ul li.iten-menu:hover{
     background: #4d66d3;
-    
 }
 
 ul li.iten-menu a{
@@ -75,7 +70,6 @@ ul li.iten-menu a{
     display: flex;
     margin-bottom: 20px;
     line-height: 40px;
-
 }
 
 
@@ -83,7 +77,6 @@ ul li.iten-menu a .txt-link{
     margin-left: 60px;
     transition: 0.2s;
     opacity: 0;
-    
 }
 
 div.menu-lateral.expandir .txt-link{
@@ -99,7 +92,6 @@ ul li.iten-menu a .icon > i{
 header {
     background: #ffffffb9;
     padding: 40px 0;
-
 }
 
 .navbar {
@@ -111,10 +103,8 @@ header {
 nav {
     position: absolute;
     top: 170px;
-    right: 570px;
-    
+    right: 570px; 
 }
-
 
 div img{
     width: 200px ;
@@ -141,8 +131,7 @@ div.compras > i:hover{
     border: solid white 2px;
     background-color: #ffffff;
     color: #000000;
-    transition: 0.5s;
-    
+    transition: 0.5s; 
 }
 
 .text-box:hover{
@@ -150,28 +139,39 @@ div.compras > i:hover{
     border: solid #7ea6ef 3px;
 }
 
-main{
+main.main-catalog{
     margin: 150px 0 0 0;
 }
 
-h2.titulo-catalog{
-    margin-left: 500px;
-    margin-bottom: 90px;
-    color: #5371FA;
-    font-size: 40px;
+main.main-home{
+    margin:0 0 0 0;
 }
 
-/* Olhinho Points */
+#searchInput{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+h2.titulo-catalog{
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px 15px;
+    margin-bottom: 40px;
+    color: #5371FA;
+    font-size: 30px;
+}
+
+/* ---------------------Olhinho Points-------------- */
 #eyeIcon {
     font-size: 40px; /* Tamanho do ícone em pixels */
-  }
+}
 
 div.points{
     text-align: center;
     font-size: 25px;
     margin: 15px 0;
     padding: 10px 15px;
-    
 }
 
 div.points h3{
@@ -186,9 +186,8 @@ div.points h4 span > i{
     color: #5371FA;
 }
 
-/* Imagens da Vitrine*/
 
-
+/* ----------------- Imagens da Vitrine -------------------*/
 div.produto h3{
     color: #3046a6;
     font-weight: bold;
@@ -196,7 +195,7 @@ div.produto h3{
 }
 
 main div.vitrine{
-    margin-left: 30px;
+    margin-left: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -207,9 +206,8 @@ main div.vitrine{
     margin: 30px 20px;
     width: 240px;
     width: 240px;
-
-
 }
+
 .vitrine-img img{
     border-radius: 50px;
     height: 100%;
@@ -217,13 +215,11 @@ main div.vitrine{
 }
 
 
-
 .box{
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
+     overflow: hidden;
     transition: 0.5s all;
-    
 }
 
 .box:hover{
@@ -231,10 +227,10 @@ main div.vitrine{
 }
 
 .box img{
-    
     border-radius: 10px;
     display: block;
     transition: 0.5s;
+    margin: 0px 20px;
 }
 
 div.box h3{
@@ -258,7 +254,6 @@ div.box h3{
     text-align: center;
     font-size: 14px;
     transition: height 0.8s;
-
 }
 
 .overlay h3{
@@ -270,7 +265,6 @@ div.box h3{
 
 .box:hover .overlay{
     height: 100%;
-    
 }
 
 div.vitrine button{
@@ -280,12 +274,10 @@ div.vitrine button{
     border: #5271ff;
     transition: 0.5s all;
     border-radius: 5px;
-    
 }
 
 div.vitrine button:hover{
-    background-color: #394fb0;
-    
+    background-color: #394fb0;  
 }
 
 div.vitrine a{
@@ -318,6 +310,7 @@ footer {
 	margin-right: 10px;
     transition: 0.2s;
 }
+
 .footer-links a:hover{
     color: #161616;
 }
