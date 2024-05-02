@@ -131,10 +131,10 @@ if (isset($_SESSION['nome_usuario'])) {
                 $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
 
                 // Consulta SQL para selecionar os dados filtrados com base no termo de pesquisa
-                $sql = "SELECT * FROM produtos WHERE nome_produto LIKE '%$searchTerm%'";
+                //$sql = "SELECT * FROM produtos WHERE nome_produto LIKE '%$searchTerm%'";
 
                 // Consulta SQL para selecionar todos os dados da tabela
-                //$sql = "SELECT * FROM produtos ORDER BY nome_produto ASC";
+                $sql = "SELECT * FROM produtos ORDER BY nome_produto ASC";
                 //$sql = "SELECT * FROM produtos WHERE nome_produto LIKE '%ifood%'";
                 //$sql = "SELECT * FROM produtos WHERE nome_produto LIKE %$search%";
                 $resultado = mysqli_query($conexao, $sql);
