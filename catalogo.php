@@ -169,11 +169,33 @@ if (isset($_SESSION['nome_usuario'])) {
                                     <h5><?php echo $produto['descricao_produto']; ?></h5>
                                 </div>
                         </div> 
-                            <button> <a href="?adicionar=<?php echo $key; ?>">Adicionar ao carrinho</a> </button>
-                </div>  
+                        
+                           <button onclick="addToCart(<?php echo $produto['id_produto']; ?>)" >Adicionar ao carrinho</button>
+                         <!--
+                            <button> <a href="?id_produto=<?php echo $produto['id_produto']; ?>" onclick="addToCart(()" >Adicionar ao carrinho</a> </button>
+                        -->
+                        </div>  
+
+                        <script>
+                        // Função para add produto no carrinho
+                        function addToCart(productId) {
+                            // Enviar uma solicitação AJAX para um arquivo PHP que irá adicionar o produto ao carrinho
+                            var xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    // Atualizar a parte da página que exibe o carrinho de compras com a resposta do servidor
+                                    document.getElementById('cart').innerHTML = xhr.responseText;
+                                }
+                            };
+                            // Definir o método e o arquivo PHP a serem usados na solicitação AJAX
+                            xhr.open('GET', 'carrinho.php?id_produto=' + productId, true);
+                            xhr.send();
+                        }
+                        </script>
+                       
         
         <?php
-
+    
                 }
             } else {
                 // Se a consulta falhar, exibir uma mensagem de erro
